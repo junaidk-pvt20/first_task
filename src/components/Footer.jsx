@@ -4,9 +4,10 @@ import twitter from "../images/icons/twitter.png"
 import insta from "../images/icons/insta.svg"
 import facebook from "../images/icons/facebook.svg"
 const Footer = () => {
+    const more = ["About Us", "Products", "Career", "Contact Us"]
     return (
-        <div className='flex bg-backwhite gap-10 justify-evenly py-16 px-6'>
-            <div className='flex items-center'>
+        <div className='flex lg:flex-row flex-col bg-backwhite gap-10 lg:justify-evenly justify-center items-start py-16 px-6'>
+            <div className='flex items-center justify-center lg:w-fit w-full'>
                 <img className='h-20' src={logo} alt="" />
             </div>
             <div className='w-[250px]'>
@@ -17,21 +18,22 @@ const Footer = () => {
             </div>
             <div>
                 <p className='text-primary'> More </p>
-                <p className='my-3 text-lighttext'> About Us </p>
-                <p className='my-3 text-lighttext'> Products </p>
-                <p className='my-3 text-lighttext'> Career </p>
-                <p className='my-3 text-lighttext'> Contact Us </p>
+                {more.map((title) => {
+                    return (
+                        <p className='my-3 text-lighttext'> {title} </p>
+                    )
+                })}
             </div>
-            <div className='grid content-between justify-between'>
+            <div className='flex flex-col items-between justify-between lg:w-fit w-full'>
                 <div className='grid gap-6 justify-items-center'>
                     <p className='text-primary'> Social Links </p>
                     <div className='flex gap-6'>
-                        <img className='h-[21px] w-[21px]' src={insta} alt="" />
-                        <img className='h-[22px]' src={twitter} alt="" />
-                        <img className='h-[21px] w-[21px]' src={facebook} alt="" />
+                        <img className='h-[21px] w-[21px]' src={insta} alt="Instagram" />
+                        <img className='h-[22px]' src={twitter} alt="Twitter" />
+                        <img className='h-[21px] w-[21px]' src={facebook} alt="Facebook" />
                     </div>
+                    <p className='text-lighttext '> © 2022 Food Truck Example</p>
                 </div>
-                <p className='text-lighttext'> © 2022 Food Truck Example</p>
             </div>
         </div>
     )
