@@ -7,7 +7,7 @@ const Main = () => {
     return (
         <div className='mb-8 flex text-center lg:text-start lg:flex-nowrap flex-wrap-reverse sm:justify-center lg:justify-end gap-10 items-center'>
             <div className='lg:w-6/12 w-full'>
-                <div className=' lg:w-full flex-center'>
+                <div className=' lg:w-full flex-center lg:mx-20 mx-0 '>
                     <img className='lg:block hidden h-16' src={logo} alt="" />
                     <div className='lg:pt-20 flex flex-col lg:items-start items-center'>
                         <h1 className='text-4xl text-center lg:px-0 px-16 lg:text-start font-bold w-full lg:w-60 text-primary'>
